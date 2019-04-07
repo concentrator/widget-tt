@@ -6,9 +6,9 @@
     evt.preventDefault();
     rulesToggle.classList.toggle('order-coupon__rules-toggle--open');
     if(rulesText.style.display === 'block') {
-      rulesText.style = '';
+      rulesText.style.cssText = '';
     } else {
-      rulesText.style.display = 'block'
+      rulesText.style.display = 'block';
     }
   });
 })();

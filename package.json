@@ -8,15 +8,15 @@
     "dev-server": "live-server --ignore=less ./src",
     "start": "npm-run-all --parallel dev-server watch:less",
     "test": "stylelint 'src/less/**/*.less'",
-    "clean:dist": "rm -rf ./dist && mkdir ./dist",
-    "copy:dist": "rsync -av ./src/ ./dist --exclude less --exclude .DS_Store",
-    "clean:bak": "rm -r ./dist/*.bak",
+    "clean:docs": "rm -rf ./docs && mkdir ./docs",
+    "copy:docs": "rsync -av ./src/ ./docs --exclude less --exclude .DS_Store",
+    "clean:bak": "rm -r ./docs/*.bak",
     "compile:less": "lessc ./src/less/style.less ./src/css/style.css",
-    "postcss-run": "LIST=`find ./dist/css -type f -name '*.css' | grep -v .min` && postcss $LIST --base ./dist/css --dir ./dist/css --ext min.css --verbose && rm -r $LIST",
-    "babel-run": "babel --verbose ./dist/js --ignore ./dist/js/**/*.min.js --out-dir ./dist/js && cd ./dist/js && renamer --find /'(.min)?(.js)$'/ --replace .min.js '**'",
-    "html:sed-css": "find ./dist -type f -name '*.html' -exec sed -i'.bak' '/<head>/,/<\\/head>/ s/\\(\\.min\\)\\{0,1\\}\\(\\.css\\)/.min.css/g' {} \\;",
-    "html:sed-js": "find ./dist -type f -name '*.html' -exec sed -i'.bak' '/<script/,/<\\/script>/ s/\\(\\.min\\)\\{0,1\\}\\(\\.js\\)/.min.js/g' {} \\;",
-    "build": "npm-run-all clean:dist compile:less copy:dist postcss-run babel-run html:sed-css html:sed-js clean:bak"
+    "postcss-run": "LIST=`find ./docs/css -type f -name '*.css' | grep -v .min` && postcss $LIST --base ./docs/css --dir ./docs/css --ext min.css --verbose && rm -r $LIST",
+    "babel-run": "babel --verbose ./docs/js --ignore ./docs/js/**/*.min.js --out-dir ./docs/js && cd ./docs/js && renamer --find /'(.min)?(.js)$'/ --replace .min.js '**'",
+    "html:sed-css": "find ./docs -type f -name '*.html' -exec sed -i'.bak' '/<head>/,/<\\/head>/ s/\\(\\.min\\)\\{0,1\\}\\(\\.css\\)/.min.css/g' {} \\;",
+    "html:sed-js": "find ./docs -type f -name '*.html' -exec sed -i'.bak' '/<script/,/<\\/script>/ s/\\(\\.min\\)\\{0,1\\}\\(\\.js\\)/.min.js/g' {} \\;",
+    "build": "npm-run-all clean:docs compile:less copy:docs postcss-run babel-run html:sed-css html:sed-js clean:bak"
   },
   "repository": {
     "type": "git",
