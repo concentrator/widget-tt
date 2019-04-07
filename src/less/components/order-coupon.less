@@ -1,0 +1,225 @@
+.order-coupon {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid @color-grey-light;
+  border-radius: 15px;
+  background-color: @color-white;
+  overflow: hidden;
+  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.09);
+
+  &__header {
+    position: relative;
+    padding-left: 17px;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    border-bottom: 1px solid @color-grey-light;
+    background-color: @color-blue;
+    box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.09);
+  }
+
+  &__close {
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 6px;
+    right: 7px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 1px;
+      background-color: @color-white;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @color-white;
+  }
+
+  &__number {
+    color: @color-yellow;
+  }
+
+  &__main {
+    position: relative;
+    padding: 17px;
+  }
+
+  &__deal {
+    display: flex;
+    align-items: center;
+    margin-right: -17px;
+    margin-bottom: 7px;
+    font-family: "ALS Schlange Slab", "Arial", sans-serif;
+    font-weight: 800;
+  }
+
+  &__name {
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 18px;
+    color: @color-blue;
+  }
+
+  &__discount {
+    width: 94px;
+    padding: 7px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: @color-blue;
+    font-size: 25px;
+    line-height: 29px;
+    color: @color-yellow;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 19px;
+    font-family: "Myriad Pro", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: @color-grey-dark;
+  }
+
+  &__social {
+    margin-bottom: 19px;
+  }
+
+  &__email-input {
+    display: block;
+    width: 100%;
+    padding: 0 12px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    height: 31px;
+    border: 1px solid @color-blue;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font: inherit;
+    color: @color-grey-dark;
+
+    &::placeholder {
+      font: inherit;
+      color: rgba(@color-grey-dark, 0.5);
+    }
+  }
+
+  &__email-message {
+    padding: 15px 10px;
+    padding-bottom: 25px;
+    border: 1px solid @color-blue;
+    border-radius: 6px;
+    margin-bottom: 15px;
+
+    p {
+      margin: 0;
+
+      &:not(:last-of-type) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &__girl {
+    display: block;
+    position: absolute;
+    right: 21px;
+    bottom: -16px;
+    z-index: 0;
+  }
+
+  &__footer {
+    position: relative;
+    padding: 17px;
+    padding-top: 21px;
+    padding-bottom: 12px;
+    background-color: @color-blue;
+    text-align: center;
+    box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.09);
+  }
+
+  &__url {
+    display: block;
+    padding: 17px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    border: 1px dashed @color-blue;
+    border-radius: 10px;
+    background-color: @color-white;
+    margin-bottom: 24px;
+    color: @color-blue;
+  }
+
+  &__rules {
+    margin-bottom: 18px;
+    font-size: 12px;
+    color: @color-white;
+  }
+
+  &__rules-toggle {
+    position: relative;
+    padding: 0;
+    padding-right: 20px;
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: 12px;
+    color: @color-white;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 5px;
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid @color-yellow;
+      border-right: 1px solid @color-yellow;
+      margin-top: 2px;
+      margin-left: 10px;
+      transform: rotate(-45deg);
+      transition: all 0.2s ease;
+    }
+
+    &--open::after {
+      top: 2px;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__rules-text {
+    display: none;
+  }
+
+  &__accept {
+    color: @color-white;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+  }
+}

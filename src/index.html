@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Flocktory widget</title>
+  </head>
+  <body>
+    <section class="order-coupon">
+      <header class="order-coupon__header">
+        <button class="order-coupon__close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <b class="order-coupon__title">
+          Ваш заказ №<span class="order-coupon__number var-order-number">1890998</span> принят и находится в обработке
+        </b>
+      </header>
+      <main class="order-coupon__main">
+        <div class="order-coupon__deal">
+          <span class="order-coupon__name">Михаил Иванович!</span>
+          <div class="order-coupon__discount">10%</div>
+        </div>
+        <p class="order-coupon__text">
+          подарите друзьям скидку в&nbsp;<span class="var-company">«CompanyName»</span> и получите скидку в&nbsp;подарок, за каждого друга
+        </p>
+        <ul class="order-coupon__social social-links">
+          <li class="social-links__item">
+            <a href="#" class="social-links__link social-links__link--ok">
+              <span class="visually-hidden">Одноклассники</span>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link social-links__link--fb">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link social-links__link--twitter">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link social-links__link--vk">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+        </ul>
+        <form class="order-coupon__email-form" method="POST" action="#">
+          <input class="order-coupon__email-input" type="text" placeholder="E-mail друзей" name="email-list">
+          <div class="order-coupon__email-message">
+            <p>
+              Хороший ассортимент и цены
+              в&nbsp;<span class="var-site_name">%site_name%</span>. Только что после
+              покупки  подарили скидку
+              <span class="var-friend_reward">%friend_reward%</span> для моих друзей!
+            </p>
+            <p>Времени мало, Вперёд!</p>
+          </div>
+          <button class="order-coupon__email-submit button" type="submit">Отправить</button>
+        </form>
+        <img class="order-coupon__girl" src="img/girl.svg" width="46" height="94" alt="">
+      </main>
+      <footer class="order-coupon__footer">
+        <a class="order-coupon__url" href="#">http://floctoryblablabla/#########</a>
+        <div class="order-coupon__rules">
+          <button class="order-coupon__rules-toggle js-rules-toggle" type="button">
+            Правила акции
+          </button>
+          <p class="order-coupon__rules-text js-rules-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem soluta impedit, laboriosam cupiditate rerum necessitatibus placeat harum iste consequuntur vitae similique quibusdam non consequatur fugiat, mollitia, nobis ratione. Corporis, fuga.
+          </p>
+        </div>
+        <a class="order-coupon__accept" href="#">Пользовательское соглашение</a>
+      </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
